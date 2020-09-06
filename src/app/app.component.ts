@@ -11,7 +11,7 @@ import { interval, Subscription } from 'rxjs';
 export class AppComponent implements OnInit, OnDestroy {
 
   rubControlValue = 0;
-  eurControlValue = '0.00';
+  eurControlValue = '0.0000';
   eurValue = null;
 
   arrOfApi = [
@@ -72,7 +72,7 @@ export class AppComponent implements OnInit, OnDestroy {
   }
 
   convertToEUR(): void {
-    this.eurControlValue = (this.rubControlValue * this.eurValue).toFixed(2);
+    this.eurControlValue = (this.rubControlValue / this.eurValue).toFixed(4);
   }
 
   ngOnDestroy(): void {

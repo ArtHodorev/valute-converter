@@ -1,12 +1,21 @@
-<h2>Конвертер валют</h2>
+
 
 <div class="wrapper">
-  <div class="block-rub">
-    <p>Рубли</p>
-    <input [(ngModel)]="rubControlValue" type="number" (input)="convertToEUR()" />
+  <div class="block-50">
+    <h4>Конвертер валют</h4>
+    <div class="content">
+      <div class="block-rub">
+        <p>Рубли</p>
+        <input [(ngModel)]="rubControlValue" type="number" (input)="convertToEUR()" />
+      </div>
+      <div class="block-eur">
+        <p>Euro</p>
+        <p>{{eurControlValue}}&nbsp;</p>
+      </div>
+    </div>
   </div>
-  <div class="block-eur">
-    <p>Euro</p>
-    <p>{{eurControlValue}}&nbsp;</p>
+  <div class="block-50">
+    <h4>Курс евро на сегодня:</h4>
+    <h2>{{eurValue}} р.</h2>
   </div>
 </div>
