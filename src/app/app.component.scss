@@ -1,0 +1,9 @@
+.wrapper {
+  display: flex;
+
+  .block {
+    &-rub, &-eur {
+      width: 20%;
+    }
+  }
+}
